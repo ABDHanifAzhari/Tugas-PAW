@@ -1,11 +1,10 @@
 <?php
 include "koneksi.php";
 
-$kode = $_POST['kode'];
 $nama = $_POST['nama'];
-$pekerjaan = $_POST['pekerjaan'];
+$email = $_POST['email'];
 
-$sql = "INSERT into tbl_101 values ('$kode','$nama','$pekerjaan')";
+$sql = "INSERT into tbl_101 values (null,'$nama','$email')";
 $hasil = mysqli_query($koneksi,$sql);
 if(!$hasil){
 	echo "Penambahan Data Gagal";

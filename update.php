@@ -1,11 +1,11 @@
 <?php
 include "koneksi.php";
 
-$kode = $_POST['kode'];
+$id = $_POST['id'];
 $nama = $_POST['nama'];
-$pekerjaan = $_POST['pekerjaan'];
+$email = $_POST['email'];
 
-$sql = "UPDATE tbl_101 set alamat='$nama', pekerjaan='$pekerjaan' where kode_alamat=$kode";
+$sql = "UPDATE tbl_101 set nama_101='$nama', email_101='$email' where id_101='$id'";
 $hasil = mysqli_query($koneksi,$sql);
 if(!$hasil){
 	echo "Update Data Gagal";
